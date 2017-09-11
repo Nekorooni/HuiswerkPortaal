@@ -20,16 +20,17 @@ if(isset($_POST['username'])) {
 }
 ?>
 <div class="container">
-    <h1>
-        LOGIN
-    </h1>
-
-    <form action="?page=login" method="POST">
-
-        <input type="text" placeholder="Username" required name="username"/><br/>
-        <input type="password" placeholder="Password" required name="password"/><br/>
-
-        <input type="submit" value="Login"/>
-    </form>
-
+    <div class="row">
+        <form action="?page=login" method="POST">
+            <div class="form-group">
+                <label for="username">Leerling nr.</label>
+                <input type="text" class="form-control" id="username" placeholder="Nummer" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
 </div>
