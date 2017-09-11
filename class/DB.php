@@ -7,9 +7,9 @@ final class DB {
 
     // Login credentials:
     private $servername = "localhost";
-    private $username = "debian-sys-maint";
-    private $password = "lgdq56dlGj6EGIyi";
-    private $database = "examentraining";
+    private $username = "root";
+    private $password = "";
+    private $database = "huiswerkportaal";
 
     private $c;
 
