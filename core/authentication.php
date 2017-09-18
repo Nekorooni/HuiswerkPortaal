@@ -5,6 +5,8 @@ $auth = [];
 $auth['guest'] = [];
 $auth['user'] = [];
 $auth['student'] = [];
+$auth['teacher'] = [];
+$auth['admin'] = [];
 
 //Define pages for each role. Is a user is not authenticated to visit a page
 //he is automatically redirected to the first page in the list of pages he is
@@ -17,8 +19,16 @@ array_push($auth['user'], 'account');
 array_push($auth['user'], 'logout');
 
 array_push($auth['student'], 'home');
+array_push($auth['student'], 'huiswerk');
 array_push($auth['student'], 'account');
 array_push($auth['student'], 'logout');
+
+array_push($auth['teacher'], 'home');
+array_push($auth['teacher'], 'account');
+array_push($auth['teacher'], 'logout');
+
+array_push($auth['admin'], 'admin');
+array_push($auth['admin'], 'logout');
 
 //Determine page
 if(isset($_GET['page'])) {
