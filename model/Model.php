@@ -117,7 +117,9 @@ abstract class Model {
         $obj->save();
     }
 
-    protected abstract static function newModel($obj);
+    protected static function newModel($obj){
+
+    }
 
     // Find every row in a table
     public static function find() {
