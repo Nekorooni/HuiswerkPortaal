@@ -4,6 +4,7 @@ $auth = [];
 //Define your roles here
 $auth['guest'] = [];
 $auth['user'] = [];
+$auth['student'] = [];
 
 //Define pages for each role. Is a user is not authenticated to visit a page
 //he is automatically redirected to the first page in the list of pages he is
