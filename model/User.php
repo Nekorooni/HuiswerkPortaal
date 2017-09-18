@@ -8,6 +8,7 @@ class User extends Model {
     protected $password;
     protected $salt;
     protected $role;
+    protected $group_id;
 
     private function __construct($username = "") {
         if($username != "") {
@@ -85,5 +86,12 @@ class User extends Model {
 
         //Check if user is valid
         return true;
+    }
+
+    public function getHomework(){
+        if ($this->role=='student'){
+            return Homework::findBy('group_id',$this->group_id);
+        }
+        return null;
     }
 }
