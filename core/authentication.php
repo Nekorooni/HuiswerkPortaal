@@ -16,6 +16,10 @@ array_push($auth['user'], 'home');
 array_push($auth['user'], 'account');
 array_push($auth['user'], 'logout');
 
+array_push($auth['student'], 'home');
+array_push($auth['student'], 'account');
+array_push($auth['student'], 'logout');
+
 //Determine page
 if(isset($_GET['page'])) {
     $page = $_GET['page'];

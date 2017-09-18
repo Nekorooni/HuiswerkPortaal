@@ -6,7 +6,6 @@ if(isset($_POST['username'])) {
     $inputPass = htmlspecialchars($_POST['password']);
     $inputPas2 = htmlspecialchars($_POST['repeat']);
     $inputMail = htmlspecialchars($_POST['email']);
-    $klas = htmlspecialchars($_POST['klas']);
 
     //Validate input
     $errors = [];
@@ -25,7 +24,7 @@ if(isset($_POST['username'])) {
       }
     } else {
       //Register user
-      $user = Leerling::register($inputUser, $inputMail, $inputPass, $klas, 'leerling');
+      $user = User::register($inputUser, $inputMail, $inputPass, 'student');
       if($user) {
           echo $user->getUsername();
 
@@ -40,18 +39,14 @@ if(isset($_POST['username'])) {
 <div class="container">
     <div class="row"><h3>Registeren</h3></div>
     <div class="row">
-        <form action="?page=login" method="POST">
+        <form action="" method="POST">
             <div class="form-group">
-                <label for="username">Leerling nr.</label>
-                <input type="text" class="form-control" id="username" placeholder="Nummer" name="username" required>
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Username" name="username" required>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="text" class="form-control" id="email" placeholder="Email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="klas">Klas</label>
-                <input type="text" class="form-control" id="klas" placeholder="Klas" name="klas" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>

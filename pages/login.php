@@ -9,7 +9,6 @@ if(isset($_POST['username'])) {
     $user = User::login($inputUser, $inputPass);
 
     if($user) {
-
           $_SESSION['username'] = $user->getUsername();
           $_SESSION['role'] = $user->getRole();
           App::redirect("home");
