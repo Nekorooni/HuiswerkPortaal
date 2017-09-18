@@ -7,6 +7,19 @@ class Homework extends Model {
     protected $title;
     protected $deadline;
 
+    public function getGroup(){
+        return $this->group_id;
+    }
+
+
+    public function getTitle(){
+        return $this->title;
+    }
+
+    public function getDeadline(){
+        return $this->deadline;
+    }
+
 
     protected static function newModel($obj)
     {
